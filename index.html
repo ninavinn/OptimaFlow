@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>OptimaFlow | Front-end Optimization & Debugging Showcase</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>OptimaFlow</h1>
+        <p>
+          Front-end ვებგვერდის ოპტიმიზაცია, დებოგი და რესპონსიული თავსებადობა
+        </p>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- I ეტაპი: წარმადობის ოპტიმიზაცია -->
+      <section id="stage-1">
+        <h2>ეტაპი 1: ვებგვერდის წარმადობის ოპტიმიზაცია</h2>
+        <p>
+          გამოსახულება ოპტიმიზებულია WebP ფორმატში და მითითებული აქვს
+          <code>loading="lazy"</code> ატრიბუტი ჩატვირთვის დროის შეასამცირებლად
+          (Lighthouse test-passed).
+        </p>
+
+        <div class="img-container">
+          <!-- OPTIMIZED: WebP format, responsive sizes, lazy loading -->
+          <img
+            src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
+            alt="OptimaFlow Hero Banner"
+            class="optimized-image"
+            loading="lazy"
+            width="1200"
+            height="600"
+          />
+        </div>
+      </section>
+
+      <!-- II ეტაპი: პროგრამული კოდის გამართვა -->
+      <section id="stage-2">
+        <h2>ეტაპი 2: პროგრამული კოდის გამართვა (Debugging)</h2>
+        <p>
+          გამოითვალეთ ფასი დისკონტის გათვალისწინებით (DevTools Breakpoints-ით
+          გამართული ფუნქცია):
+        </p>
+
+        <div class="calc-form">
+          <div class="input-group">
+            <label for="priceInput">საწყისი ფასი ($):</label>
+            <input
+              type="number"
+              id="priceInput"
+              placeholder="მაგ. 100"
+              min="0"
+            />
+          </div>
+          <div class="input-group">
+            <label for="discountInput">ფასდაკლება (%):</label>
+            <input
+              type="number"
+              id="discountInput"
+              placeholder="მაგ. 15"
+              min="0"
+              max="100"
+            />
+          </div>
+          <button id="calcButton" type="button">გამოთვლა</button>
+        </div>
+
+        <div id="resultOutput" class="result-box">
+          შედეგი: შეიყვანეთ მონაცემები...
+        </div>
+      </section>
+
+      <!-- III ეტაპი: თავსებადობა და რესპონსიულობა -->
+      <section id="stage-3">
+        <h2>ეტაპი 3: თავსებადობა და რესპონსიულობა (375px +)</h2>
+        <p>
+          ეს ბლოკი სრულად თავსებადია Chrome, Safari-სა და მობილურ მოწყობილობებზე
+          (375px სიგანეზე აღარ იწვევს ჰორიზონტალურ სქროლს):
+        </p>
+
+        <div class="responsive-box">
+          <strong>გამართული ელემენტი:</strong> გამოყენებულია
+          <code>max-width: 600px</code> და <code>width: 100%</code>, რაც
+          უზრუნველყოფს ელემენტის მოქნილობას ნებისმიერ ეკრანზე.
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; OptimaFlow | შპს „სქილვილი“ - ფინალური პროექტი</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
